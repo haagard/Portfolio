@@ -210,7 +210,7 @@ span{
 ==============================================================================================*/
 footer {
     align-self: stretch;
-    height: 794px;
+    height: 1000px;
     overflow: hidden;
     flex-shrink: 0;
     display: flex;
@@ -286,6 +286,7 @@ footer {
     height: auto; /* Maintenir les proportions de l'image */
     max-width: 70%; /* Limite la largeur de l'image à 90% */
     margin: 0 auto; /* Centrer l'image */
+    border-radius: 20px;
 }
 
 /* Légende de l'image */
@@ -415,10 +416,20 @@ footer {
         right: 10px;  /* Ajuster la distance de droite pour les petits écrans */
         padding: 8px; /* Réduire la taille du padding si nécessaire */
     }
-    .modal-content{
-        max-width: 300px;
-        margin-top: 20px;
+    .modal-content {
+        max-width: 80%; /* Augmenter la largeur de la modal */
+        margin-top: 15px; /* Réduire l'espacement du haut */
     }
+
+    .close {
+        font-size: 28px; /* Réduire légèrement la taille du bouton fermer */
+    }
+
+    #modalImage {
+        max-height: 500px; /* Limiter la hauteur de l'image */
+        transform: scale(1.1); /* Légèrement agrandir l'image */
+    }
+
     
 
 /* Carousels */
@@ -489,6 +500,19 @@ footer {
     footer {
         height: fit-content; /* Réduit la hauteur */
     }
+    .modal-content {
+        max-width: 90%; /* Augmenter encore la largeur de la modal */
+        margin-top: 10px; /* Réduire l'espacement du haut */
+    }
+
+    .close {
+        font-size: 25px; /* Réduire encore la taille du bouton fermer */
+    }
+
+    #modalImage {
+        max-height: 400px; /* Limiter la hauteur de l'image */
+        transform: scale(1.2); /* Agrandir l'image un peu plus */
+    }
 }
 @media only screen and (max-width: 480px) {
 
@@ -514,6 +538,19 @@ footer {
         bottom: 5px;  /* Réduire encore la distance du bas */
         right: 5px;   /* Réduire encore la distance de droite */
         padding: 6px; /* Réduire encore la taille du padding */
+    }
+    .modal-content {
+        max-width: 95%; /* Laisser encore plus de place pour l'écran */
+        margin-top: 5px; /* Réduire encore l'espacement du haut */
+    }
+
+    .close {
+        font-size: 20px; /* Réduire encore la taille du bouton fermer */
+    }
+
+    #modalImage {
+        max-height: 300px; /* Limiter la hauteur de l'image */
+        transform: scale(1.3); /* Agrandir l'image encore plus */
     }
 
 }
