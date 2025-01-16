@@ -423,12 +423,15 @@ footer {
 
     .close {
         font-size: 28px; /* Réduire légèrement la taille du bouton fermer */
+        top: 5px; /* Déplacer un peu le bouton vers le haut */
+        right: 10px; /* Réduire l'espace à droite */
     }
 
     #modalImage {
         max-height: 500px; /* Limiter la hauteur de l'image */
         transform: scale(1.1); /* Légèrement agrandir l'image */
     }
+
 
     
 
@@ -507,6 +510,8 @@ footer {
 
     .close {
         font-size: 25px; /* Réduire encore la taille du bouton fermer */
+        top: 5px; /* Déplacer vers le haut */
+        right: 5px; /* Positionner à droite */
     }
 
     #modalImage {
@@ -545,7 +550,9 @@ footer {
     }
 
     .close {
-        font-size: 20px; /* Réduire encore la taille du bouton fermer */
+        font-size: 20px; /* Réduire la taille du bouton fermer */
+        top: 5px; /* Déplacer vers le haut */
+        right: 5px; /* Positionner à droite */
     }
 
     #modalImage {
