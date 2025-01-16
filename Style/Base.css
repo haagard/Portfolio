@@ -156,6 +156,56 @@ header {
     animation: neonjaune 10s infinite linear;
 }
 /*===========================================================================================
+    =================================  I  N  T  R  O  ======================================
+==============================================================================================*/
+.intropres {
+    width: 1440px;
+    height: 250px;
+    box-shadow: 0px 4px 4px #4454BC, 0 0 8px #ebf353, 0 0 16px #ff00ff;  
+    border-radius: 20px;  
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    background-image: url('../Images/gif/cityHaute.gif');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+    text-align: left;
+    font-size: 24px;
+    color: #ebf353;
+    font-family: Orbitron;
+    letter-spacing: 0.05em;
+}
+
+.hello-container{
+    margin: 10px;
+}
+h1{
+    font-size: 36px;
+    font-family: 'Bebas Neue';
+}
+.hello {
+    font-size: 20px;
+    font-family: 'Press Start 2P';
+}
+.jean-mathieu1 {
+    color: #fff;
+}
+.hello-container{
+    margin: 10px;
+}
+h1{
+    font-size: 36px;
+    font-family: 'Bebas Neue';
+}
+.hello {
+    font-size: 20px;
+    font-family: 'Press Start 2P';
+}
+span{
+    color: #fff;
+}
+/*===========================================================================================
     ===============================  F  O  O  T  E  R ====================================
 ==============================================================================================*/
 footer {
