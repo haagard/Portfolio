@@ -133,9 +133,10 @@
             	</div>
 				<div class="carousel-container" id="carousel1">
 					<div class="carousel">
-						<img src="/Images/gif/loading.png" alt="Image 1" class="clickable-image car-img active">
-						<img src="/Images/gif/loading.png" alt="Image 1" class="clickable-image car-img">
-						<img src="/Images/gif/loading.png" alt="Image 1" class="clickable-image car-img">
+						<img src="/Images/gif/train.gif" alt="Image 1" class="clickable-image car-img active">
+						<img src="/Images/gif/loading.png" alt="Image 2" class="clickable-image car-img">
+						<img src="/Images/gif/maison.gif" alt="Image 3" class="clickable-image car-img">
+						<img src="/Images/gif/loading.png" alt="Image 3" class="clickable-image car-img">
 						<!-- Ajoute autant d'images que nécessaire -->
 					</div>
 				
@@ -215,10 +216,13 @@
         </div>
     </div>
 </footer>
+<!-- Modal content -->
 <div id="imageModal" class="modal">
-	<span class="close">&times;</span>
-		<img class="modal-content" id="modalImage">
-	<div id="caption"></div>
+    <span class="close">&times;</span>
+    <img id="modalImage" class="modal-content">
+    <div id="caption"></div>
+    <button id="prevModal" class="modal-nav prev">Previous</button>
+    <button id="nextModal" class="modal-nav next">Next</button>
 </div>
 <script src="JS/Main.js"></script>
 <script type="text/javascript" src="js/vanilla-tilt.js"></script>

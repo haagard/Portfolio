@@ -81,18 +81,27 @@ if (scrollArrow) {
     console.error('L\'élément #scroll-arrow n\'a pas été trouvé.');
 }
 
-// Modal script
+// Modal script avec carrousel
 function setupModal() {
     const modal = document.getElementById("imageModal");
     const modalImg = document.getElementById("modalImage");
     const captionText = document.getElementById("caption");
     const closeBtn = document.getElementsByClassName("close")[0];
 
-    document.querySelectorAll(".clickable-image").forEach(img => {
-        img.addEventListener("click", function() {
-            modal.style.display = "block";
-            modalImg.src = this.src;
-            captionText.innerHTML = this.alt;
+    // Récupérer tous les carrousels
+    const carousels = document.querySelectorAll('.carousel');
+
+    // Pour chaque carrousel, on met en place le comportement de la modal
+    carousels.forEach((carousel, index) => {
+        const images = carousel.querySelectorAll('img');
+        images.forEach((img, imgIndex) => {
+            img.addEventListener("click", function() {
+                modal.style.display = "block";
+                modalImg.src = this.src;
+                captionText.innerHTML = this.alt;
+                currentCarouselIndex = imgIndex;  // Garder la trace de l'index dans le carrousel
+                updateCarousel(carousel, currentCarouselIndex);  // Met à jour le carrousel dans la modal
+            });
         });
     });
 
@@ -103,9 +112,43 @@ function setupModal() {
             modal.style.display = "none";
         }
     };
+
+    // Fonction pour afficher l'image suivante / précédente dans le carrousel dans la modal
+    const prevBtn = document.getElementById('prevModal');
+    const nextBtn = document.getElementById('nextModal');
+
+    prevBtn.addEventListener('click', function() {
+        moveCarousel(-1);
+    });
+
+    nextBtn.addEventListener('click', function() {
+        moveCarousel(1);
+    });
+
+    // Fonction pour mettre à jour le carrousel
+    function updateCarousel(carousel, index) {
+        const images = carousel.querySelectorAll('img');
+        modalImg.src = images[index].src;
+        captionText.innerHTML = images[index].alt;
+    }
+
+    // Fonction pour déplacer l'image dans le carrousel
+    let currentCarouselIndex = 0;
+    function moveCarousel(direction) {
+        const carousel = document.querySelectorAll('.carousel')[0];  // Choisir un carrousel
+        const images = carousel.querySelectorAll('img');
+        currentCarouselIndex += direction;
+
+        if (currentCarouselIndex < 0) {
+            currentCarouselIndex = images.length - 1;
+        } else if (currentCarouselIndex >= images.length) {
+            currentCarouselIndex = 0;
+        }
+
+        updateCarousel(carousel, currentCarouselIndex);
+    }
 }
 document.addEventListener("DOMContentLoaded", setupModal);
-
 
 document.addEventListener("DOMContentLoaded", function() {
     // Initialiser les carrousels
@@ -128,33 +171,51 @@ function initCarousel(carouselId) {
     const nextButton = carousel.querySelector('.next');
 
     prevButton.addEventListener('click', function() {
-        moveSlide(-1, carouselId, slides, totalSlides);
+        moveSlide(-1, slides, totalSlides);
+        resetAutoScroll();  // Réinitialiser le défilement automatique
     });
 
     nextButton.addEventListener('click', function() {
-        moveSlide(1, carouselId, slides, totalSlides);
+        moveSlide(1, slides, totalSlides);
+        resetAutoScroll();  // Réinitialiser le défilement automatique
     });
-}
 
-function moveSlide(direction, carouselId, slides, totalSlides) {
-    let currentIndex = Array.from(slides).findIndex(slide => slide.classList.contains("active"));
+    // Défilement automatique
+    let autoScrollInterval = setInterval(function() {
+        moveSlide(1, slides, totalSlides);
+    }, 7000);  // Change l'image toutes les 3 secondes
 
-    // Masquer l'image active
-    slides[currentIndex].classList.remove("active");
+    // Fonction pour déplacer le carrousel
+    function moveSlide(direction, slides, totalSlides) {
+        let currentIndex = Array.from(slides).findIndex(slide => slide.classList.contains("active"));
+        
+        // Masquer l'image active
+        slides[currentIndex].classList.remove("active");
 
-    // Calculer le nouvel index
-    currentIndex += direction;
+        // Calculer le nouvel index
+        currentIndex += direction;
 
-    // Gérer les bordures (revenir au début ou à la fin)
-    if (currentIndex < 0) {
-        currentIndex = totalSlides - 1;
-    } else if (currentIndex >= totalSlides) {
-        currentIndex = 0;
+        // Gérer les bordures (revenir au début ou à la fin)
+        if (currentIndex < 0) {
+            currentIndex = totalSlides - 1;
+        } else if (currentIndex >= totalSlides) {
+            currentIndex = 0;
+        }
+
+        // Afficher la nouvelle image
+        slides[currentIndex].classList.add("active");
     }
 
-    // Afficher la nouvelle image
-    slides[currentIndex].classList.add("active");
+    // Fonction pour réinitialiser le défilement automatique
+    function resetAutoScroll() {
+        clearInterval(autoScrollInterval);  // Arrêter le défilement automatique
+        autoScrollInterval = setInterval(function() {
+            moveSlide(1, slides, totalSlides);
+        }, 3000);  // Redémarrer le défilement automatique
+    }
 }
+
+
 
 
 
