@@ -1,0 +1,98 @@
+.intropres {
+    width: 1440px;
+    height: max-content;
+    box-shadow: 0px 4px 4px #4454BC, 0 0 8px #ebf353, 0 0 16px #ff00ff;  
+    border-radius: 20px;  
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    background-image: url('../Images/gif/cityHaute.gif');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+    text-align: left;
+    font-size: 24px;
+    color: #ebf353;
+    font-family: Orbitron;
+    letter-spacing: 0.05em;
+}
+
+.hello-container{
+    margin: 10px;
+}
+h1{
+    font-size: 36px;
+    font-family: 'Bebas Neue';
+}
+.hello {
+    font-size: 20px;
+    font-family: 'Press Start 2P';
+}
+span{
+    color: #fff;
+}
+
+.intro{
+    padding: 10px;
+    height: fit-content;
+    width: 1440px;
+}
+.intro p {
+    padding: 5px;
+}
+.acte-imgI{
+    background-image: url('../Images/gif/trains.gif');
+}
+.acte-imgI{
+    border-radius: 20px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 1440px;
+    height: 415px;
+    overflow: hidden;
+    flex-shrink: 0;
+    object-fit: cover;
+    animation: neon 10s infinite linear; /* Ajout de l'animation */
+}
+.projet {
+    max-width: 1440px;
+    height: fit-content;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 72px 5px;
+    box-sizing: border-box;
+    gap: 116px;
+}
+.projet-1{
+    max-width: 1340px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 49px 43px;
+    box-sizing: border-box;
+}
+.projet-text {
+    padding: 3px;
+    width: 40%;
+    border-radius: 40px;
+    background-color: rgba(255, 255, 255, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.projet-img{
+    height: 800px;
+    width: 55%;
+    border-radius: 40px;
+}
+.carousel-container{
+    width: 55%;
+}
+.carousel{
+    height: 800px;
+}

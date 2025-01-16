@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+<head>
+  	<meta charset="utf-8">
+  	<meta name="viewport" content="initial-scale=1, width=device-width">
+	<link rel="stylesheet" href="Style/Base.css">
+  	<link rel="stylesheet"  href="Style/Main.css" />
+	<link rel="stylesheet" href="Style/carte.css">
+  	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas Neue:wght@400&display=swap" />
+  	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400&display=swap" />
+  	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Press Start 2P:wght@400&display=swap" />
+  	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  	
+  	
+  	
+</head>
+<body>
+			<!-- H E A D E R -->
+<header class="acceuil">
+	<div class="blur">
+		<ul class="navmenu">
+			<li class="nav">Home</li>
+          	<li class="nav" id="projetText">Projet</li>
+			<li class="nav" id="contactText">Contact</li>
+      	</ul>
+	</div>
+</header>
+<section>
+			<!-- M E S S A G E    D E   B I E N V E N U E -->
+	<div class="intropres">
+		<div class="blur">
+			<div class="hello-container">
+				<h1>Web Développeur</h1>
+				<div class="hello">
+					<p>&lt;p&gt;Hello world bienvenue sur mon site,</p>
+					<p>je m'appelle <span class="jean-mathieu1">Jean-Mathieu</span> &lt;p&gt;</p>
+				</div>
+          	</div>
+		</div>
+	</div>
+			<!-- A B O U T -->
+	<div class="about">
+		<div class="about-intro">
+			<img class="Gaagard" alt="" src="Images/Haagard.png">
+			<div class="about-text">
+				<p>Bienvenue dans mon univers numérique !</p>
+				<p>Je m’appelle Jean-Mathieu Karsa, étudiant en Bachelor Développeur Web à HETIC. Passionné par l’informatique depuis mon plus jeune âge, j’ai découvert le pouvoir de la programmation en créant mon propre jeu durant ma terminale, ce qui a confirmé mon envie de faire de cette passion mon métier.</p>
+				<p>Aujourd’hui, je me spécialise dans le développement web, avec un intérêt particulier pour la création de solutions numériques innovantes et adaptées. À travers mes projets, je cherche à allier créativité, rigueur technique, et expérience utilisateur.</p>
+				<p>Je considère chaque ligne de code comme une opportunité de m’exprimer et d’innover. Grâce à l’alternance, j’aspire à enrichir ma vision du métier en confrontant mes compétences aux exigences du monde professionnel.</p>
+				<p>Explorez mon portfolio pour découvrir mes réalisations, et n’hésitez pas à me contacter pour collaborer sur de nouveaux projets inspirants.</p>
+        	</div>
+		</div>
+		<div class="mon_background">
+			<div class="tab-titles">
+				<p class="tab-links active-link" onclick="opentab('competences')">Compétences</p>
+				<p class="tab-links" onclick="opentab('experience')">Expérience</p>
+				<p class="tab-links" onclick="opentab('parcours')">Parcours scolaire</p>
+			</div>
+			<div class="tab-contents active-tab" id="competences">
+				<ul>
+					<li>
+						<h2>Langages de programmation</h2>
+						<p>Html 5 -Css 3</p>
+						<p>Php 8 - C++ -Python 3 -Javascript</p>
+					</li>
+					<li>
+						<h2>Framework</h2>
+						<p>React JS - Vue JS - Node.js</p>
+					</li>
+					<li>
+						<h2>Jeux</h2>
+						<p>Python</p>
+						<p>Notion unity</p>
+					
+					</li>
+				</ul>
+			</div>
+			<div class="tab-contents" id="experience">
+				<ul>
+					<li>
+						<h2>DEVELOPPEUR FRONT-END</h2>
+						<p>2024</p>
+						<p>Développement Front-End : Structure HTML, mise en page en CSS</p>
+						<p>Responsive Design : Adaptation pour tous les appareils (mobile, tablette, desktop)</p>
+						<p>Fonctionnalités Interactives : Utilisation de JavaScript pour des éléments dynamiques.</p>
+					</li>
+					<li>
+						<h2>DESIGN UI/UX</h2>
+						<p>2024</p>
+						<p>Conception UI/UX : Création de maquettes sur Figma pour des interfaces modernes et intuitives</p>
+						<p>Prototypage : Intégration d’interactions et de transitions pour simuler l’expérience utilisateur</p>
+					</li>
+					</li>
+					<li>
+						<h2>INÉGRATEUR HARDWARE</h2>
+						<p>2021</p>
+						<p>Installation et configuration de serveur</p>
+						<p>Accompagnement des clients après mise en service</p>
+						<p>Maintenance du logiciel</p>
+					</li>
+				</ul>
+			</div>
+			<div class="tab-contents" id="parcours">
+				<ul>
+					<li>
+						<h2>2024-2027</h2>
+						<p>Hetic, Bachelor Web développeur</p>
+					</li>
+					<li>
+						<h2>2022</h2>
+						<p>3w Academy, Web développeur</p>
+					</li>
+					<li>
+						<h2>2020-2021</h2>
+						<p>Ensitech, BTS SIO option Slam</p>
+					</li>
+					<li>
+						<h2>2017</h2>
+						<p>Lycée Polyvalent Jean-Jaurès, Baccalauréat scientifique</p>
+					</li>
+				</ul>
+			</div>
+		</div>
+    </div>
+			<!--P R O J E T -->
+	<div class="work">
+		<img class="acte-imgI" alt="" src="" >
+        <div class="oui" data-scroll-to="projet" id="Projet">
+				<div class="work-resume">
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sollicitudin felis ut mauris gravida, vel volutpat turpis tincidunt. Suspendisse potenti. Aenean vehicula, libero a volutpat pharetra, felis nulla volutpat nisl, in laoreet turpis risus ac odio. Integer mollis magna et elit laoreet, sit amet egestas sapien elementum. Fusce condimentum lacus non turpis fermentum, ac ullamcorper augue vestibulum. Ut et malesuada ligula. Sed sit amet libero auctor, posuere risus non, sollicitudin metus.</p>
+              		<p >Sed sed libero tincidunt, suscipit enim at, fringilla lorem. Etiam vulputate neque quis nisi ullamcorper, sed lacinia eros vestibulum. Aenean consectetur orci in nisi varius, non vehicula augue iaculis. Nunc sed nibh urna. Integer eget nisi sed nulla efficitur hendrerit ut a risus. Mauris hendrerit volutpat urna, et pharetra leo vehicula vitae. In sed elit sollicitudin, volutpat nunc id, tincidunt eros. Ut porttitor lectus ut dolor congue, nec vehicula nisi dignissim.</p>
+              		<p>Nullam posuere mauris quis ante tristique, ac tincidunt velit sollicitudin. Sed fringilla felis eget ex facilisis, vitae volutpat lorem dictum. Maecenas volutpat dolor nec varius volutpat. Phasellus convallis malesuada mi, ac dictum risus tempus et. Pellentesque vitae orci magna. Mauris pharetra lacinia leo, vel lacinia ex sodales sed. Nunc auctor ante ut malesuada facilisis. Donec ac sem vitae sapien posuere tempor vel ac lectus.</p>
+            	</div>
+				<div class="carousel-container" id="carousel1">
+					<div class="carousel">
+						<img src="/Images/gif/loading.png" alt="Image 1" class="clickable-image car-img active">
+						<img src="/Images/gif/loading.png" alt="Image 1" class="clickable-image car-img">
+						<img src="/Images/gif/loading.png" alt="Image 1" class="clickable-image car-img">
+						<!-- Ajoute autant d'images que nécessaire -->
+					</div>
+				
+					<button class="btn-car prev" data-carousel="carousel1">&#10094;</button>
+					<button class="btn-car next" data-carousel="carousel1">&#10095;</button>
+				</div>
+				<div class="bouton">
+					<div class="btn"><a href="Projet-dev.html">Voir tout</a></div>
+				</div>
+        </div>
+		<img class="acte-imgII" alt="" src="">
+		<div class="oui">
+				<div class="work-resume">
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sollicitudin felis ut mauris gravida, vel volutpat turpis tincidunt. Suspendisse potenti. Aenean vehicula, libero a volutpat pharetra, felis nulla volutpat nisl, in laoreet turpis risus ac odio. Integer mollis magna et elit laoreet, sit amet egestas sapien elementum. Fusce condimentum lacus non turpis fermentum, ac ullamcorper augue vestibulum. Ut et malesuada ligula. Sed sit amet libero auctor, posuere risus non, sollicitudin metus.</p>
+              		<p>Sed sed libero tincidunt, suscipit enim at, fringilla lorem. Etiam vulputate neque quis nisi ullamcorper, sed lacinia eros vestibulum. Aenean consectetur orci in nisi varius, non vehicula augue iaculis. Nunc sed nibh urna. Integer eget nisi sed nulla efficitur hendrerit ut a risus. Mauris hendrerit volutpat urna, et pharetra leo vehicula vitae. In sed elit sollicitudin, volutpat nunc id, tincidunt eros. Ut porttitor lectus ut dolor congue, nec vehicula nisi dignissim.</p>
+              		<p>Nullam posuere mauris quis ante tristique, ac tincidunt velit sollicitudin. Sed fringilla felis eget ex facilisis, vitae volutpat lorem dictum. Maecenas volutpat dolor nec varius volutpat. Phasellus convallis malesuada mi, ac dictum risus tempus et. Pellentesque vitae orci magna. Mauris pharetra lacinia leo, vel lacinia ex sodales sed. Nunc auctor ante ut malesuada facilisis. Donec ac sem vitae sapien posuere tempor vel ac lectus.</p>
+				</div>
+				<div class="carousel-container "id="carousel2">
+					<div class="carousel">
+						<img src="/Images/gif/loading.png" alt="Image 1" class="clickable-image car-img active">
+						<img src="/Images/gif/loading.png" alt="Image 1" class="clickable-image car-img">
+						<img src="/Images/gif/loading.png" alt="Image 1" class="clickable-image car-img">
+						<!-- Ajoute autant d'images que nécessaire -->
+					</div>
+				
+					<button class="btn-car prev" data-carousel="carousel2">&#10094;</button>
+					<button class="btn-car next" data-carousel="carousel2">&#10095;</button>
+				</div>
+				<div class="bouton">
+					<div class="btn"><a href="Projet-uix.html">Voir tout</a></div>
+				</div>
+        </div>
+        <img class="acte-imgIII" alt="" src="Acte III.png">
+        <div class="oui">
+			<div class="work-resume">
+				Lorem ipsum, dolor sit amet consectetur adipisicing elit. Necessitatibus veritatis temporibus quis cum fugit officia cupiditate quaerat consequatur voluptate dicta exercitationem, eligendi suscipit nam tempore aut dolor fuga a mollitia. Quo quae, eligendi beatae pariatur mollitia sint rem, tempora, suscipit adipisci cumque ad! Hic neque molestiae eos quidem sequi culpa iure, fuga dolores rerum aspernatur, deserunt assumenda, delectus maxime rem molestias in. Nesciunt quod perferendis nemo, saepe maiores libero repellat ipsa labore numquam laborum! Esse sequi quis ipsa eum cupiditate. Rem quos officiis veritatis quisquam quis nobis velit voluptatum dolore inventore quod, nesciunt est consectetur, ad adipisci culpa doloribus nam?
+			</div>
+			<div class="carousel-container"id="carousel3">
+				<div class="carousel">
+					<img src="/Images/gif/loading.png" alt="Image 1" class="clickable-image car-img active">
+					<img src="/Images/gif/loading.png" alt="Image 1" class="clickable-image car-img">
+					<img src="/Images/gif/loading.png" alt="Image 1" class="clickable-image car-img">
+					<!-- Ajoute autant d'images que nécessaire -->
+				</div>
+			
+				<button class="btn-car prev" data-carousel="carousel3">&#10094;</button>
+				<button class="btn-car next" data-carousel="carousel3">&#10095;</button>
+			</div>
+			<div class="bouton">
+				<div class="btn">Voir tout</div>
+			</div>
+	</div>
+</section>
+
+			<!-- Footer avec la flèche de retour en haut -->
+<footer id="footer" data-scroll-to='contact'>
+	<div class="ecran">
+        <div class="carte" data-tilt>
+            <img src="Images/Gaagard.jpg" alt="Photo de Jean-Mathieu Karsa">
+            <h2>Jean-Mathieu Karsa</h2>
+            <p>Développeur Web</p>
+            <div class="reseau">
+                <a href="https://www.linkedin.com/in/jean-mathieu-karsa-045b83239/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/haagard" target="_blank"><i class="fa-brands fa-github"></i></a>
+                <a href="mailto:jean-mathieu.karsa@outlook.com"><i class="fa-solid fa-envelope"></i></a> 
+            </div>
+			<div>
+			<p>Actuellement en bachelor développeur web à HETIC. 
+			<br>
+			Dynamique, autonome, polyvalent et une ayant bonne approche du travail en groupe, je recherche un stage.</p>
+			</div>
+        </div>
+    </div>
+    <div class="container">
+        <div id="scroll-arrow" class="hidden">
+            <i class="fa-solid fa-arrow-up"></i>
+        </div>
+    </div>
+</footer>
+<div id="imageModal" class="modal">
+	<span class="close">&times;</span>
+		<img class="modal-content" id="modalImage">
+	<div id="caption"></div>
+</div>
+<script src="JS/Main.js"></script>
+<script type="text/javascript" src="js/vanilla-tilt.js"></script>
+</body>
+</html>
