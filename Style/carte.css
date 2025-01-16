@@ -93,7 +93,7 @@
     .carte {
         margin: 15px;
         width: 80%;
-        height: 80%;
+        height: fit-content;
         padding: 20px 15px; /* Réduit encore le padding */
     }
 
