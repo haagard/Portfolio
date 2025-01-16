@@ -368,9 +368,9 @@ footer {
     }
 
     #scroll-arrow {
-        font-size: 25px;
-        bottom: 10px;
-        right: 10px;
+        bottom: 10px; /* Ajuster la distance du bas pour les petits écrans */
+        right: 10px;  /* Ajuster la distance de droite pour les petits écrans */
+        padding: 8px; /* Réduire la taille du padding si nécessaire */
     }
     .modal-content{
         max-width: 300px;
@@ -467,10 +467,10 @@ footer {
         width: 140px;
         height: 50px;
     }
-
     #scroll-arrow {
-        font-size: 15px;
-        bottom: 5px;
-        right: 5px;
+        bottom: 5px;  /* Réduire encore la distance du bas */
+        right: 5px;   /* Réduire encore la distance de droite */
+        padding: 6px; /* Réduire encore la taille du padding */
     }
+
 }

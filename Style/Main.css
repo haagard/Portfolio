@@ -229,54 +229,66 @@ h1{
 ==============================================================================================*/
 @media only screen and (max-width: 1024px) {
     * {
-        margin:0;
         align-items: center;
+        box-sizing: border-box; /* Assure que les espacements ne perturbent pas la mise en page */
     }
 
     /* Intro */
     .intropres {
-        width: 80%; /* Réduit la largeur à 15% */
+        width: 80%; /* Réduit la largeur */
         height: 300px; /* Hauteur réduite */
         margin: 0 auto; /* Centre l'image horizontalement */
     }
+
     .hello-container{
-        padding: 5px;
+        padding: 10px; /* Ajoute de l'espace autour du contenu */
     }
 
     /* About */
-    .about-intro{
+    .about-intro {
         flex-direction: column;
+        gap: 20px; /* Ajoute un écart entre les éléments */
     }
+
     .about-text{
         width: 100%;
+        padding: 15px; /* Ajoute de l'espace autour du texte */
     }
+
     .Gaagard{
         height: 400px;
+        margin-bottom: 20px; /* Ajoute un espacement en bas de l'élément */
     }
+
     .mon_background {
         flex-direction: column;
         width: 80%;
+        gap: 20px; /* Ajoute un espacement entre les éléments enfants */
     }
-    .tab-titles{
+
+    .tab-titles {
         flex-direction: column;
+        gap: 15px; /* Ajoute un espacement entre les éléments dans la section */
     }
-    .oui{
-        gap: 50px;
+
+    .oui {
+        gap: 50px; 
         height: fit-content;
+        margin-top: 20px; /* Ajoute un espace au-dessus */
     }
+
     .work-resume {
         width: 80%;
+        margin-top: 20px; /* Ajoute de l'espace au-dessus */
     }
+
     /* Work */
     .acte-imgI, .acte-imgII, .acte-imgIII {
-        width: 80%; /* Réduit la largeur à 15% */
+        width: 80%; /* Réduit la largeur */
         height: 200px; /* Hauteur réduite */
-        margin: 10% auto; /* Centre l'image horizontalement */
+        margin: 20px auto; /* Ajoute un espacement vertical et centre l'image horizontalement */
         object-fit: cover; /* Maintient la proportion de l'image */
         display: block; /* Assure que l'image soit un élément en bloc */
     }
-
-
-
-
 }
+

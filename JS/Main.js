@@ -53,6 +53,24 @@ if (scrollArrow) {
         }
     }
 
+// Assure-toi que l'élément existe avant d'essayer de l'utiliser
+const scrollArrow = document.getElementById('scroll-arrow');
+
+// Vérifie si l'élément existe
+if (scrollArrow) {
+    // Affiche ou cache la flèche en fonction du défilement
+    function toggleScrollArrow() {
+        const halfPageHeight = document.documentElement.scrollHeight / 2; // 50% de la hauteur totale de la page
+
+        if (window.scrollY >= halfPageHeight && window.innerWidth > 720) { // La flèche apparaît à 50% de la hauteur de la page, mais pas sur les petits écrans
+            scrollArrow.classList.remove('hidden');
+            scrollArrow.style.opacity = 1;
+        } else {
+            scrollArrow.classList.add('hidden');
+            scrollArrow.style.opacity = 0;
+        }
+    }
+
     // Fonction pour faire défiler la page vers le haut en douceur
     function scrollToTop() {
         window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -63,9 +81,26 @@ if (scrollArrow) {
 
     // Écouteur d'événements pour le défilement
     window.addEventListener('scroll', toggleScrollArrow);
+
+    // Supprime la flèche sur les petits écrans (inférieurs à 720px)
+    function hideArrowOnSmallScreens() {
+        if (window.innerWidth <= 720) {
+            scrollArrow.classList.add('hidden'); // Cache la flèche
+        } else {
+            scrollArrow.classList.remove('hidden'); // Affiche la flèche sur les grands écrans
+        }
+    }
+
+    // Appel initial pour vérifier la taille de l'écran et ajuster la flèche
+    hideArrowOnSmallScreens();
+
+    // Réajuster l'affichage de la flèche quand la taille de la fenêtre change
+    window.addEventListener('resize', hideArrowOnSmallScreens);
 } else {
     console.error('L\'élément #scroll-arrow n\'a pas été trouvé.');
 }
+
+
 // Modal script
 function setupModal() {
     const modal = document.getElementById("imageModal");
