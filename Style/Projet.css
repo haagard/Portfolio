@@ -40,6 +40,7 @@
     box-sizing: border-box;
 }
 .projet-text {
+    height: fit-content;
     margin: 5px;
     padding: 5px;
     width: 40%;
@@ -70,33 +71,52 @@
         align-items: center;
     }
 
-    /* Intro */
-    .intropres {
-        width: 80%; /* Réduit la largeur à 15% */
-        height: 300px; /* Hauteur réduite */
-        margin: 0 auto; /* Centre l'image horizontalement */
-    }
-    .intro{
-        width: 100%;
-    }
-    .hello-container{
-        padding: 5px;
-    }
-    .projet-1{
-        flex-direction: column;
-    }
-    .projet-text,.projet-img, .carousel-container{
-        width: 100%;
-    }
-    .projet-img,.carousel-container{
-        max-height: 500px;
-    }
-     /* Work */
-    .acte-imgI, .acte-imgII, .acte-imgIII {
-            width: 80%; /* Réduit la largeur à 15% */
-            height: 200px; /* Hauteur réduite */
-            margin: 10% auto; /* Centre l'image horizontalement */
-            object-fit: cover; /* Maintient la proportion de l'image */
-            display: block; /* Assure que l'image soit un élément en bloc */
-    }
+/* Intro */
+.intropres {
+    width: 80%; /* Réduit la largeur à 80% */
+    margin: 0 auto; /* Centre l'image horizontalement */
+    margin-bottom: 20px; /* Ajoute un espacement inférieur */
+    height: fit-content;
+}
+
+.intro {
+    width: 100%;
+    margin-bottom: 20px; /* Ajoute un espacement inférieur */
+}
+
+.hello-container {
+    margin-bottom: 15px; /* Ajoute un espacement inférieur */
+}
+
+.projet-1 {
+    flex-direction: column;
+    margin-bottom: 30px; /* Ajoute un espacement inférieur */
+}
+
+/* Espacement pour les images et autres éléments */
+.projet-text,
+.projet-img,
+.carousel-container {
+    padding: 10px;
+    width: 100%;
+    height: fit-content;
+    margin-bottom: 20px; /* Ajoute un espacement inférieur */
+}
+
+.projet-img,
+.carousel-container {
+    max-height: 500px;
+    margin-bottom: 20px; /* Ajoute un espacement inférieur */
+}
+
+/* Work */
+.acte-imgI, .acte-imgII, .acte-imgIII {
+    width: 80%; /* Réduit la largeur à 80% */
+    height: 200px; /* Hauteur réduite */
+    margin: 10% auto; /* Centre l'image horizontalement */
+    object-fit: cover; /* Maintient la proportion de l'image */
+    display: block; /* Assure que l'image soit un élément en bloc */
+    margin-bottom: 20px; /* Ajoute un espacement inférieur entre les images */
+}
+
 }
