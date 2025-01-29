@@ -283,7 +283,7 @@ footer {
 /* Image dans la modal */
 #modalImage {
     width: 100%; /* L'image occupe toute la largeur de la modal */
-    height: auto; /* Maintenir les proportions de l'image */
+    height: 600px; /* Maintenir les proportions de l'image */
     max-width: 70%; /* Limite la largeur de l'image à 90% */
     margin: 0 auto; /* Centrer l'image */
     border-radius: 20px;
@@ -365,6 +365,17 @@ footer {
 
 .carousel img.active {
     display: block;  /* Affiche l'image active */
+    opacity: 1;
+    animation: fadeIn 1s ease-in-out;  /* Animation pour l'image active */
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
 .btn-car {
