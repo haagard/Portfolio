@@ -151,7 +151,6 @@ h1{
 
 .oui {
     max-width: 1440px;
-    height: 760px;
     overflow: hidden;
     display: flex;
     flex-direction: row;  /* Garde les éléments sur la même ligne */
